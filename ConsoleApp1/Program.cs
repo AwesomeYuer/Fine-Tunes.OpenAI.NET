@@ -50,14 +50,14 @@ var files = Directory.GetFiles(@"data\", "*.jsonl");
                 (
                     !string.IsNullOrEmpty(customFineTunedModel)
                     &&
-                    j.Status == "succeeded"
+                    j?.Status == "succeeded"
                 )
             {
                 needBreak = true;
                 break;
             }
         }
-        if ( needBreak ) 
+        if (needBreak) 
         {
             break;
         }
