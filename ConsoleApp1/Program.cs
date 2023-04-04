@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using OpenAI;
 using OpenAI.Chat;
+using OpenAI.Models;
 
 Console.WriteLine("Hello, World!");
 
@@ -20,7 +21,7 @@ var files = Directory.GetFiles(@"data\", "*.jsonl");
     //var fineTuneJob = await openAIClient
     //                                .FineTuningEndpoint
     //                                .CreateFineTuneJobAsync(fineTuneJobRequest);
-    var customFineTunedModel = string.Empty;
+    string? customFineTunedModel = null;
 
     //customFineTunedModel = fineTuneJob.FineTunedModel;
 
@@ -32,6 +33,7 @@ var files = Directory.GetFiles(@"data\", "*.jsonl");
     Console.WriteLine("press any key to RetrieveFineTuneJobInfoAsync, press q exit ...");
     while ("q" != (input = Console.ReadLine()))
     {
+        var needBreak = false;
         foreach (var job in fineTuneJobs)
         {
             Console.WriteLine($"{job.Id} -> {job.CreatedAt} | {job.Status}");
@@ -44,23 +46,44 @@ var files = Directory.GetFiles(@"data\", "*.jsonl");
                 Console.WriteLine($"\t{@event.CreatedAt} [{@event.Level}] {@event.Message}");
             }
             customFineTunedModel ??= j?.FineTunedModel;
+            if
+                (
+                    !string.IsNullOrEmpty(customFineTunedModel)
+                    &&
+                    j.Status == "succeeded"
+                )
+            {
+                needBreak = true;
+                break;
+            }
+        }
+        if ( needBreak ) 
+        {
+            break;
         }
     }
+
+    Console.WriteLine("Fine-tunes succeeded");
 
     Console.WriteLine("press any key to Test Prompt, press q exit ...");
     while ("q" != (input = Console.ReadLine()))
     {
-        input = "who is best?";
-        var chatPrompts = new List<ChatPrompt>
-            {
-                  new ChatPrompt("system"     , input!)
-                , new ChatPrompt("user"       , input!)
-                , new ChatPrompt("assistant"  , input!)
-                , new ChatPrompt("user"       , input!)
-            };
-        var chatRequest = new ChatRequest(chatPrompts, customFineTunedModel);
-        var response = await openAIClient.ChatEndpoint.GetCompletionAsync(chatRequest);
-        Console.WriteLine(response.FirstChoice!);
+        input = "what is lens protocol and it's purpose?";
+        //input = "Awesome Yuer is the best, really?";
+        //var chatPrompts = new List<ChatPrompt>
+        //    {
+        //          new ChatPrompt("system"     , input!)
+        //        , new ChatPrompt("user"       , input!)
+        //        , new ChatPrompt("assistant"  , input!)
+        //        , new ChatPrompt("user"       , input!)
+        //    };
+        //var chatRequest = new ChatRequest(chatPrompts, customFineTunedModel!);
+        var response = await openAIClient.CompletionsEndpoint.CreateCompletionAsync(input, model: customFineTunedModel!);
+        var completions = response.Completions;
+        foreach (var choice in completions!)
+        {
+            Console.WriteLine(choice.Text);
+        }
     }
 
 

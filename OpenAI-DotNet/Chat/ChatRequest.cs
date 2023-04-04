@@ -80,8 +80,14 @@ namespace OpenAI.Chat
         {
             Model = model ?? Models.Model.GPT3_5_Turbo;
 
-            if (!Model.Contains("turbo") &&
-                !Model.Contains("gpt-4"))
+            if
+                (
+                    !Model.Contains("turbo")
+                    &&
+                    !Model.Contains("gpt-4")
+                    &&
+                    !Model.Contains(":ft-personal", StringComparison.OrdinalIgnoreCase)
+                )
             {
                 throw new ArgumentException($"{Model} is not supported", nameof(model));
             }
