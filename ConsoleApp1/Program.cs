@@ -1,9 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using OpenAI.FineTuning;
 using OpenAI;
-using OpenAI.Files;
 using OpenAI.Chat;
-using OpenAI.Models;
 
 Console.WriteLine("Hello, World!");
 
