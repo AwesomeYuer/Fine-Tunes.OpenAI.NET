@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI-DotNet", "OpenAI-DotNet\OpenAI-DotNet.csproj", "{76B6480E-154A-4341-B530-AFE04B254360}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI-DotNet-Proxy", "OpenAI-DotNet-Proxy\OpenAI-DotNet-Proxy.csproj", "{A4D454D4-C21C-49D3-85A7-B4950358C6E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI-DotNet-Tests", "OpenAI-DotNet-Tests\OpenAI-DotNet-Tests.csproj", "{066EC5A5-47CE-4B91-B924-F236644037C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI-DotNet-Tests-Proxy", "OpenAI-DotNet-Tests-Proxy\OpenAI-DotNet-Tests-Proxy.csproj", "{F8B5D079-FD33-4A9E-92C4-CC88C911CFF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.OpenAI.NET", "00.OpenAI.NET", "{4FF5DE58-D494-4813-84DE-BD5858F85EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A7C425E5-3056-4B8E-89A7-9EAE136A1A4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76B6480E-154A-4341-B530-AFE04B254360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B6480E-154A-4341-B530-AFE04B254360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B6480E-154A-4341-B530-AFE04B254360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B6480E-154A-4341-B530-AFE04B254360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D454D4-C21C-49D3-85A7-B4950358C6E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D454D4-C21C-49D3-85A7-B4950358C6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D454D4-C21C-49D3-85A7-B4950358C6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D454D4-C21C-49D3-85A7-B4950358C6E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066EC5A5-47CE-4B91-B924-F236644037C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066EC5A5-47CE-4B91-B924-F236644037C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066EC5A5-47CE-4B91-B924-F236644037C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066EC5A5-47CE-4B91-B924-F236644037C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B5D079-FD33-4A9E-92C4-CC88C911CFF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B5D079-FD33-4A9E-92C4-CC88C911CFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B5D079-FD33-4A9E-92C4-CC88C911CFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B5D079-FD33-4A9E-92C4-CC88C911CFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C425E5-3056-4B8E-89A7-9EAE136A1A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C425E5-3056-4B8E-89A7-9EAE136A1A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C425E5-3056-4B8E-89A7-9EAE136A1A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C425E5-3056-4B8E-89A7-9EAE136A1A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76B6480E-154A-4341-B530-AFE04B254360} = {4FF5DE58-D494-4813-84DE-BD5858F85EBF}
+		{A4D454D4-C21C-49D3-85A7-B4950358C6E7} = {4FF5DE58-D494-4813-84DE-BD5858F85EBF}
+		{066EC5A5-47CE-4B91-B924-F236644037C1} = {4FF5DE58-D494-4813-84DE-BD5858F85EBF}
+		{F8B5D079-FD33-4A9E-92C4-CC88C911CFF3} = {4FF5DE58-D494-4813-84DE-BD5858F85EBF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {971477B1-6BBA-40CD-8B76-AEBC01D99130}
+	EndGlobalSection
+EndGlobal
