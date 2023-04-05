@@ -1,5 +1,5 @@
 # Forked From
-[OpenAI-DotNet](https://github.com/RageAgainstThePixel/OpenAI-DotNet).
+[OpenAI-DotNet](https://github.com/RageAgainstThePixel/OpenAI-DotNet)
 
 
 # OpenAI-DotNet
