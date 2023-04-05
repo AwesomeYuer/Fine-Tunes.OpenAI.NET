@@ -1,3 +1,7 @@
+# Forked
+Forked from [OpenAI-DotNet](https://github.com/RageAgainstThePixel/OpenAI-DotNet).
+
+
 # OpenAI-DotNet
 
 [![Discord](https://img.shields.io/discord/855294214065487932.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/xQgMW9ufN4)
