@@ -7,8 +7,6 @@ var auth = OpenAIAuthentication.LoadFromDirectory();
 
 var openAIClient = new OpenAIClient(auth);
 
-//var
-
 var files = Directory.GetFiles(@"data\", "*.jsonl");
 //foreach (var file in files)
 {
