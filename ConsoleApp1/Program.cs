@@ -104,7 +104,6 @@ foreach (var file in files)
         }
     }
 
-
     //var result = await openAIClient.FilesEndpoint.DeleteFileAsync(fileData);
 
 }
