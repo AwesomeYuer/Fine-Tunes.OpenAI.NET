@@ -84,7 +84,9 @@ foreach (var file in files)
     while ("q" != (input = Console.ReadLine()))
     {
         input = "what is lens protocol and it's purpose?";
+
         //input = "Awesome Yuer is the best, really?";
+        
         //var chatPrompts = new List<ChatPrompt>
         //    {
         //          new ChatPrompt("system"     , input!)
@@ -93,6 +95,7 @@ foreach (var file in files)
         //        , new ChatPrompt("user"       , input!)
         //    };
         //var chatRequest = new ChatRequest(chatPrompts, customFineTunedModel!);
+        
         var response = await openAIClient.CompletionsEndpoint.CreateCompletionAsync(input, model: customFineTunedModel!);
         var completions = response.Completions;
         foreach (var choice in completions!)
