@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-# define needCreateFineTuneJobRequest111
+// if you want to CreateFineTuneJobRequest at first 
+// please remove the suffix, preserve "needCreateFineTuneJobRequest" only as below:
+# define needCreateFineTuneJobRequest_111
 
 using OpenAI;
 
