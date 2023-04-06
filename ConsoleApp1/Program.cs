@@ -45,7 +45,7 @@ foreach (var file in files)
         var needBreak = false;
         foreach (var job in fineTuneJobs)
         {
-            // only use the first succeeded Fine Tune for testing
+            // only use the first succeeded Fine Tune Job for testing
             var j = job;
             Console.WriteLine($"{j.Id} -> {j.CreatedAt} | {j.Status}");
             if (j.Status != "succeeded")
